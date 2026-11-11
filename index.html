@@ -1,0 +1,585 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Miguel Álvarez · Webs, apps e informática en Boadilla del Monte</title>
+<meta name="description" content="Webs, tiendas online y apps para negocios de toda la Comunidad de Madrid, además de reparación de ordenadores y redes para empresas. Precio cerrado antes de empezar.">
+<meta property="og:title" content="Miguel Álvarez · Webs, apps e informática en Boadilla del Monte">
+<meta property="og:description" content="Webs, tiendas online, apps, reparación de ordenadores y redes para negocios locales.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+<meta property="og:url" content="https://miguelalvarezalbaweb.pages.dev/">
+<meta property="og:image" content="https://miguelalvarezalbaweb.pages.dev/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://miguelalvarezalbaweb.pages.dev/">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Miguel Álvarez Alba",
+  "description": "Desarrollo de páginas web, tiendas online y aplicaciones a medida, arreglo de ordenadores e instalación de redes para empresas en la Comunidad de Madrid.",
+  "url": "https://miguelalvarezalbaweb.pages.dev/",
+  "image": "https://miguelalvarezalbaweb.pages.dev/og.png",
+  "telephone": "+34699932207",
+  "priceRange": "€€",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Boadilla del Monte",
+    "postalCode": "28660",
+    "addressRegion": "Madrid",
+    "addressCountry": "ES"
+  },
+  "areaServed": {
+    "@type": "AdministrativeArea",
+    "name": "Comunidad de Madrid"
+  },
+  "knowsAbout": [
+    "Diseño web",
+    "Tiendas online",
+    "Shopify",
+    "Desarrollo de aplicaciones",
+    "Reparación de ordenadores",
+    "Redes informáticas"
+  ],
+  "sameAs": [
+    "https://www.linkedin.com/in/miguel-%C3%A1lvarez-alba-215919306",
+    "https://github.com/MiguelAlvarezAlba"
+  ]
+}
+</script>
+<link rel="stylesheet" href="fonts/fonts.css">
+<style>
+/* Layout: una columna estrecha y legible; tarjeta de ficha local como tesis en el hero, secciones separadas por espacio, no por cajas */
+:root {
+  --bg: #F4F7F3;
+  --surface: #FFFFFF;
+  --ink: #142019;
+  --muted: #56645B;
+  --line: #D9E2DB;
+  --accent: #1E7A4C;
+  --accent-ink: #FFFFFF;
+  --accent-soft: #E1F0E6;
+  --warn: #B4472C;
+  --display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --body: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0F1612; --surface: #17211B; --ink: #E5EEE8; --muted: #9DAEA3; --line: #2A372F;
+    --accent: #4FBF85; --accent-ink: #0B140F; --accent-soft: #1D3528; --warn: #E8846A;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0F1612; --surface: #17211B; --ink: #E5EEE8; --muted: #9DAEA3; --line: #2A372F;
+  --accent: #4FBF85; --accent-ink: #0B140F; --accent-soft: #1D3528; --warn: #E8846A;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding-left: max(20px, env(safe-area-inset-left, 0px));
+  padding-right: max(20px, env(safe-area-inset-right, 0px));
+}
+h1, h2, h3 { font-family: var(--display); line-height: 1.1; margin: 0; text-wrap: balance; letter-spacing: -0.01em; }
+p { margin: 0; }
+a { color: inherit; }
+a:focus-visible, button:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
+
+.eyebrow {
+  font-family: var(--mono);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+}
+
+/* Cabecera */
+.top { padding-block: 22px; }
+.top .wrap { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; }
+.brand { font-family: var(--display); font-weight: 800; font-size: 19px; text-decoration: none; }
+.brand span { color: var(--accent); }
+.top nav { display: flex; gap: 20px; font-size: 14px; flex-wrap: wrap; }
+.top nav a { text-decoration: none; color: var(--muted); }
+.top nav a:hover { color: var(--ink); }
+
+/* Hero */
+.hero { padding-block: 48px 72px; }
+.hero .wrap { display: grid; grid-template-columns: 1.15fr 1fr; gap: 56px; align-items: center; }
+.hero-copy { display: flex; flex-direction: column; gap: 22px; min-width: 0; }
+.hero h1 { font-size: clamp(38px, 6vw, 64px); font-weight: 800; }
+.hero h1 em { font-style: normal; color: var(--accent); }
+.lede { font-size: 18px; color: var(--muted); max-width: 46ch; }
+.ctas { display: flex; gap: 12px; flex-wrap: wrap; }
+.btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 13px 22px; border-radius: 999px;
+  font-weight: 600; font-size: 15px; text-decoration: none;
+  border: 1.5px solid var(--ink); background: transparent; color: var(--ink);
+  cursor: pointer; font-family: var(--body);
+}
+.btn.primary { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+.btn:hover { transform: translateY(-1px); }
+@media (prefers-reduced-motion: no-preference) { .btn { transition: transform .15s ease; } }
+
+/* Ficha local: la tesis */
+.listing {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 22px;
+  display: flex; flex-direction: column; gap: 14px;
+  box-shadow: 0 18px 40px -24px rgba(20, 32, 25, 0.35);
+  min-width: 0;
+}
+.listing .name { font-family: var(--display); font-weight: 700; font-size: 22px; }
+.stars { font-family: var(--mono); font-size: 14px; color: var(--muted); }
+.stars b { color: var(--ink); }
+.row { display: grid; grid-template-columns: 92px 1fr; gap: 12px; font-size: 14px; padding-top: 12px; border-top: 1px dashed var(--line); }
+.row dt { color: var(--muted); }
+.row dd { margin: 0; }
+.missing { color: var(--warn); font-weight: 600; }
+.fixed { color: var(--accent); font-weight: 600; }
+.toggle { display: flex; background: var(--bg); border-radius: 999px; padding: 4px; gap: 4px; align-self: flex-start; }
+.toggle button {
+  border: 0; background: transparent; color: var(--muted);
+  font: 600 13px var(--body); padding: 7px 14px; border-radius: 999px; cursor: pointer;
+}
+.toggle button[aria-pressed="true"] { background: var(--surface); color: var(--ink); box-shadow: 0 1px 3px rgba(0,0,0,.12); }
+.listing-note { font-size: 13px; color: var(--muted); }
+
+/* Secciones */
+section.block { padding-block: 64px; border-top: 1px solid var(--line); }
+.head { display: flex; flex-direction: column; gap: 10px; margin-bottom: 36px; max-width: 60ch; }
+.head h2 { font-size: clamp(28px, 4vw, 40px); font-weight: 800; }
+.head p { color: var(--muted); }
+
+/* Servicios */
+.plans { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.plan {
+  display: flex; flex-direction: column; gap: 14px;
+  padding: 26px; border-radius: 16px; background: var(--surface); border: 1px solid var(--line);
+  min-width: 0;
+}
+.plan.featured { border: 2px solid var(--accent); }
+.plan h3 { font-size: 22px; font-weight: 700; }
+.price { font-family: var(--mono); font-size: 15px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.price strong { font-family: var(--display); font-size: 34px; color: var(--ink); font-weight: 800; letter-spacing: -0.02em; }
+.plan ul { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 8px; font-size: 15px; }
+.plan li { padding-left: 22px; position: relative; }
+.plan li::before { content: ""; position: absolute; left: 2px; top: 9px; width: 9px; height: 9px; border-radius: 2px; background: var(--accent); }
+.tag { align-self: flex-start; font-family: var(--mono); font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; padding: 4px 10px; border-radius: 999px; background: var(--accent-soft); color: var(--accent); }
+.fineprint { margin-top: 18px; font-size: 13px; color: var(--muted); }
+
+/* Proceso */
+.steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px; counter-reset: step; }
+.step { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+.step::before {
+  counter-increment: step; content: counter(step);
+  font-family: var(--display); font-weight: 800; font-size: 44px; line-height: 1; color: var(--accent);
+}
+.step h3 { font-size: 18px; font-weight: 700; }
+.step p { font-size: 15px; color: var(--muted); }
+
+/* Proyectos */
+.projects { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.project { display: flex; flex-direction: column; gap: 12px; padding: 26px; border-radius: 16px; border: 1px solid var(--line); min-width: 0; }
+.project h3 { font-size: 24px; font-weight: 700; }
+.project p { color: var(--muted); font-size: 15px; }
+.stack { display: flex; flex-wrap: wrap; gap: 6px; }
+.stack span { font-family: var(--mono); font-size: 12px; padding: 3px 9px; border-radius: 6px; background: var(--accent-soft); color: var(--ink); }
+.project a.link { font-weight: 600; color: var(--accent); text-decoration: none; margin-top: auto; }
+.project a.link:hover { text-decoration: underline; }
+.status { font-family: var(--mono); font-size: 12px; color: var(--muted); }
+
+/* Sobre mí */
+.about { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+.about p { color: var(--muted); max-width: 60ch; }
+.about .copy { display: flex; flex-direction: column; gap: 14px; min-width: 0; }
+.facts { margin: 0; display: grid; gap: 0; }
+.facts div { display: grid; grid-template-columns: 130px 1fr; gap: 12px; padding-block: 12px; border-bottom: 1px solid var(--line); font-size: 15px; }
+.facts dt { color: var(--muted); font-family: var(--mono); font-size: 12px; text-transform: uppercase; letter-spacing: 0.06em; padding-top: 3px; }
+.facts dd { margin: 0; }
+
+/* Contacto */
+.contact { background: var(--ink); color: var(--bg); }
+.contact .wrap { padding-block: 72px; display: flex; flex-direction: column; gap: 24px; }
+.contact h2 { font-size: clamp(30px, 5vw, 48px); font-weight: 800; max-width: 18ch; }
+.contact p { color: color-mix(in srgb, var(--bg) 75%, var(--ink)); max-width: 52ch; }
+.channels { display: flex; flex-wrap: wrap; gap: 12px; }
+.chan {
+  display: inline-flex; align-items: center; gap: 12px;
+  padding: 12px 16px; border-radius: 12px;
+  border: 1px solid color-mix(in srgb, var(--bg) 25%, var(--ink));
+  font-size: 15px; color: var(--bg); text-decoration: none; background: transparent;
+}
+.chan small { font-family: var(--mono); font-size: 11px; text-transform: uppercase; letter-spacing: .08em; opacity: .7; }
+.chan .val { user-select: all; font-weight: 600; }
+.chan button {
+  border: 0; border-radius: 8px; padding: 6px 10px; cursor: pointer;
+  background: var(--accent); color: var(--accent-ink); font: 600 12px var(--body);
+}
+footer { padding-block: 24px; font-size: 13px; color: var(--muted); }
+
+@media (max-width: 860px) {
+  .hero .wrap, .about, .projects { grid-template-columns: 1fr; gap: 36px; }
+  .plans { grid-template-columns: 1fr; }
+  .steps { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 480px) {
+  .steps { grid-template-columns: 1fr; }
+  .facts div { grid-template-columns: 1fr; gap: 2px; }
+  .hero { padding-block: 24px 56px; }
+}
+
+.foot { display: flex; justify-content: space-between; gap: 12px 24px; flex-wrap: wrap; }
+.foot nav { display: flex; gap: 20px; }
+.foot a { color: var(--muted); }
+.foot a:hover { color: var(--ink); }
+
+.group-title { font-size: 20px; font-weight: 700; margin: 8px 0 18px; }
+.plans + .fineprint { margin-bottom: 44px; }
+.plans + .fineprint:last-child { margin-bottom: 0; }
+
+.chan { max-width: 100%; flex-wrap: wrap; }
+.chan .val { min-width: 0; overflow-wrap: anywhere; }
+
+.price.quote strong { font-size: 22px; letter-spacing: -0.01em; }
+.price.quote { min-height: 41px; display: flex; align-items: flex-end; }
+
+.gh-link { margin-top: 20px; display: flex; align-items: center; gap: 14px; padding: 18px 22px; border-radius: 16px; border: 1px dashed var(--line); text-decoration: none; color: var(--ink); max-width: 100%; }
+.gh-link:hover { border-color: var(--accent); }
+.gh-link span { display: flex; flex-direction: column; min-width: 0; }
+.gh-link small { font-family: var(--mono); font-size: 12px; color: var(--muted); overflow-wrap: anywhere; }
+.gh-link .arrow { margin-left: auto; color: var(--accent); font-weight: 700; font-size: 18px; }
+
+/* Menú y barra de contacto en móvil */
+.menu-btn { display: none; align-items: center; gap: 8px; border: 1.5px solid var(--line); background: var(--surface); color: var(--ink); border-radius: 999px; padding: 8px 14px; font: 600 14px var(--body); cursor: pointer; }
+.menu-icon, .menu-icon::before, .menu-icon::after { display: block; width: 16px; height: 2px; background: currentColor; border-radius: 2px; position: relative; }
+.menu-icon::before, .menu-icon::after { content: ""; position: absolute; left: 0; }
+.menu-icon::before { top: -5px; }
+.menu-icon::after { top: 5px; }
+.mobile-cta { display: none; }
+@media (max-width: 720px) {
+  body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); background: var(--bg); z-index: 30; }
+  .top { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20; background: color-mix(in srgb, var(--bg) 94%, transparent); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); padding-block: 12px; }
+  .menu-btn { display: inline-flex; }
+  .top nav { display: none; width: 100%; flex-direction: column; gap: 0; font-size: 17px; }
+  .top nav.open { display: flex; }
+  .top nav a { color: var(--ink); padding-block: 13px; border-top: 1px solid var(--line); }
+  .mobile-cta {
+    display: flex; gap: 10px; position: fixed; left: 0; right: 0; bottom: 0; z-index: 25;
+    padding-top: 10px;
+    padding-bottom: calc(10px + env(safe-area-inset-bottom, 0px));
+    padding-left: max(16px, env(safe-area-inset-left, 0px));
+    padding-right: max(16px, env(safe-area-inset-right, 0px));
+    background: color-mix(in srgb, var(--bg) 94%, transparent); backdrop-filter: blur(8px);
+    border-top: 1px solid var(--line);
+  }
+  .mobile-cta .btn { flex: 1; justify-content: center; padding: 13px 10px; }
+  footer { padding-bottom: calc(96px + env(safe-area-inset-bottom, 0px)); }
+  section[id], main[id] { scroll-margin-top: 72px; }
+}
+</style>
+</head>
+<body>
+
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#inicio">Miguel Álvarez<span>.</span></a>
+    <button type="button" class="menu-btn" id="menu-btn" aria-expanded="false" aria-controls="site-nav">
+      <span class="menu-icon" aria-hidden="true"></span>Menú
+    </button>
+    <nav aria-label="Secciones" id="site-nav">
+      <a href="#servicios">Servicios</a>
+      <a href="#proyectos">Proyectos</a>
+      <a href="#sobre-mi">Sobre mí</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+<main id="inicio">
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-copy">
+        <span class="eyebrow">Desarrollo web e informática · Boadilla del Monte</span>
+        <h1>Tus clientes ya te recomiendan. <em>Que también te encuentren.</em></h1>
+        <p class="lede">Hago webs y tiendas online para negocios de toda la Comunidad de Madrid, desarrollo apps a medida y me encargo de los ordenadores y la red de tu oficina.</p>
+        <div class="ctas">
+          <a class="btn primary" href="#contacto">Pide tu presupuesto</a>
+          <a class="btn" href="#proyectos">Ver proyectos</a>
+        </div>
+      </div>
+
+      <div class="listing" aria-label="Ejemplo de ficha de un negocio en un buscador de mapas">
+        <div class="toggle" role="group" aria-label="Comparar ficha">
+          <button type="button" id="btn-sin" aria-pressed="true">Sin web</button>
+          <button type="button" id="btn-con" aria-pressed="false">Con web</button>
+        </div>
+        <div>
+          <div class="name">Tu negocio</div>
+          <div class="stars"><b>4,9</b> ★★★★★ · 105 reseñas · Boadilla del Monte</div>
+        </div>
+        <dl style="margin:0; display:flex; flex-direction:column; gap:12px;">
+          <div class="row"><dt>Sitio web</dt><dd id="f-web" class="missing">No disponible</dd></div>
+          <div class="row"><dt>Reservar</dt><dd id="f-res" class="missing">Solo por teléfono</dd></div>
+          <div class="row"><dt>Servicios</dt><dd id="f-serv" class="missing">Hay que preguntar</dd></div>
+        </dl>
+        <p class="listing-note" id="f-note">Muchos negocios de la zona tienen reseñas excelentes y ningún sitio donde enviar a quien les busca.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="servicios">
+    <div class="wrap">
+      <div class="head">
+        <span class="eyebrow">Servicios</span>
+        <h2>Precio cerrado antes de empezar</h2>
+        <p>Sin sorpresas: te digo lo que cuesta, lo que incluye y cuándo estará listo. El dominio, la tienda y las cuentas quedan siempre a tu nombre.</p>
+      </div>
+
+      <h3 class="group-title">Webs y tiendas online</h3>
+      <div class="plans">
+        <article class="plan">
+          <h3>Web de presentación</h3>
+          <div class="price">desde <strong>300 €</strong></div>
+          <ul>
+            <li>Una página con todo lo esencial</li>
+            <li>Diseño adaptado al móvil</li>
+            <li>Botón de WhatsApp y mapa</li>
+            <li>Enlazada con tu ficha de Google</li>
+            <li>Lista en una semana</li>
+          </ul>
+        </article>
+        <article class="plan">
+          <h3>Web con reservas</h3>
+          <div class="price">desde <strong>650 €</strong></div>
+          <ul>
+            <li>Hasta 5 páginas</li>
+            <li>Reserva de citas o clases online</li>
+            <li>Catálogo de servicios y precios</li>
+            <li>Formulario de contacto</li>
+            <li>SEO local básico para tu zona</li>
+          </ul>
+        </article>
+        <article class="plan featured">
+          <span class="tag">Novedad</span>
+          <h3>Tienda online</h3>
+          <div class="price">desde <strong>1.500 €</strong></div>
+          <ul>
+            <li>Tienda en Shopify con tu marca y tu dominio</li>
+            <li>Control de stock: lo agotado no se puede comprar</li>
+            <li>Catálogo por temporadas</li>
+            <li>Pago con tarjeta y envíos a domicilio</li>
+            <li>La gestionas tú desde el móvil</li>
+          </ul>
+        </article>
+      </div>
+      <p class="fineprint">Mantenimiento opcional: webs desde 25 €/mes y tiendas online desde 50 €/mes, con cambios de textos, fotos y precios incluidos.</p>
+
+      <h3 class="group-title">Apps e informática</h3>
+      <div class="plans">
+        <article class="plan">
+          <h3>Apps a medida</h3>
+          <div class="price quote"><strong>Presupuesto cerrado</strong></div>
+          <ul>
+            <li>Aplicaciones web para gestionar tu negocio</li>
+            <li>Paneles de clientes, reservas o pedidos</li>
+            <li>Conexión con las herramientas que ya usas</li>
+            <li>Funcionan en el ordenador y en el móvil</li>
+            <li>Te digo el precio y el plazo antes de empezar</li>
+          </ul>
+        </article>
+        <article class="plan">
+          <h3>Arreglo de ordenadores</h3>
+          <div class="price"><strong>30 €</strong> / hora</div>
+          <ul>
+            <li>Ordenador lento: limpieza y puesta a punto</li>
+            <li>Eliminación de virus</li>
+            <li>Formateo e instalación del sistema: Windows, macOS o Linux</li>
+            <li>Ampliación de memoria y disco SSD (piezas aparte)</li>
+            <li>Impresoras, programas y correo</li>
+          </ul>
+        </article>
+        <article class="plan">
+          <h3>Redes para empresas</h3>
+          <div class="price quote"><strong>Presupuesto tras visita</strong></div>
+          <ul>
+            <li>Cableado y puntos de red</li>
+            <li>Wifi que llegue a toda la oficina</li>
+            <li>Router, switch y red de invitados</li>
+            <li>Impresoras y carpetas compartidas</li>
+            <li>Copias de seguridad de los equipos</li>
+          </ul>
+        </article>
+      </div>
+      <p class="fineprint">Precios orientativos sin IVA. El presupuesto final depende de lo que necesites.</p>
+    </div>
+  </section>
+
+  <section class="block" id="proceso">
+    <div class="wrap">
+      <div class="head">
+        <span class="eyebrow">Cómo trabajo</span>
+        <h2>De la primera charla al proyecto terminado</h2>
+      </div>
+      <div class="steps">
+        <div class="step"><h3>Charla de 20 minutos</h3><p>Gratis, en tu local o por teléfono. Me cuentas qué necesitas y a quién quieres llegar.</p></div>
+        <div class="step"><h3>Propuesta</h3><p>Te paso por escrito qué incluye, el precio cerrado y la fecha de entrega.</p></div>
+        <div class="step"><h3>Diseño y desarrollo</h3><p>Te enseño avances para que opines antes de darla por terminada.</p></div>
+        <div class="step"><h3>Entrega</h3><p>La publico, te explico cómo cambiar lo básico y queda todo a tu nombre.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="proyectos">
+    <div class="wrap">
+      <div class="head">
+        <span class="eyebrow">Proyectos</span>
+        <h2>Lo que he construido</h2>
+      </div>
+      <div class="projects">
+        <article class="project">
+          <span class="status">Demo publicada</span>
+          <h3>ScoutFit</h3>
+          <p>Plataforma de scouting para clubes de fútbol: fichas de jugadores, análisis de compatibilidad con el equipo y panel para el cuerpo técnico. Aplicación completa, de la base de datos a la interfaz.</p>
+          <div class="stack"><span>React</span><span>Vite</span><span>Node.js</span><span>Express</span><span>MySQL</span></div>
+          <a class="link" href="https://scoutfit-miguix04.free.je" target="_blank" rel="noopener">Ver la demo →</a>
+        </article>
+        <article class="project">
+          <span class="status">En desarrollo</span>
+          <h3>Prevención de lesiones</h3>
+          <p>Aplicación que analiza el movimiento con la cámara para detectar patrones de riesgo de lesión en deportistas, usando estimación de postura.</p>
+          <div class="stack"><span>React</span><span>MediaPipe</span><span>Node.js</span><span>MySQL</span></div>
+          <a class="link" href="https://github.com/MiguelAlvarezAlba/prevencion-de-lesiones" target="_blank" rel="noopener">Ver el código →</a>
+        </article>
+      </div>
+      <a class="gh-link" href="https://github.com/MiguelAlvarezAlba" target="_blank" rel="noopener">
+        <svg width="22" height="22" viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+        <span><strong>Más proyectos en mi GitHub</strong><small>github.com/MiguelAlvarezAlba</small></span>
+        <span class="arrow" aria-hidden="true">→</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="block" id="sobre-mi">
+    <div class="wrap about">
+      <div class="copy">
+        <span class="eyebrow">Sobre mí</span>
+        <h2 style="font-size: clamp(28px, 4vw, 40px); font-weight: 800;">Soy Miguel, vivo en Boadilla</h2>
+        <p>Estoy en el último curso del Grado Superior en Desarrollo de Aplicaciones Web en ESIC, que termino en 2027, y antes hice el Grado Medio de Sistemas Microinformáticos y Redes. Trabajo con tecnologías actuales y también con WordPress cuando lo que necesitas es una web que puedas editar tú.</p>
+        <p>Por eso, además de webs y apps, también monto y reparo ordenadores e instalo redes en oficinas.</p>
+        <p>Al ser de aquí, puedo pasarme por tu negocio, ver cómo trabajas y proponerte lo que de verdad te hace falta.</p>
+      </div>
+      <dl class="facts">
+        <div><dt>Formación</dt><dd>Grado Superior DAW en ESIC (último curso) · Grado Medio SMR</dd></div>
+        <div><dt>Certificación</dt><dd>Microsoft Azure Fundamentals (AZ-900)</dd></div>
+        <div><dt>Herramientas</dt><dd>React, Node.js, PHP, MySQL, WordPress, Shopify</dd></div>
+        <div><dt>Informática</dt><dd>Montaje y reparación de equipos, Windows, macOS y Linux, redes y wifi</dd></div>
+        <div><dt>Zona</dt><dd>Toda la Comunidad de Madrid. Vivo en Boadilla del Monte</dd></div>
+      </dl>
+    </div>
+  </section>
+</main>
+
+<section class="contact" id="contacto">
+  <div class="wrap">
+    <span class="eyebrow">Contacto</span>
+    <h2>¿Hablamos de tu proyecto?</h2>
+    <p>Escríbeme y te respondo en el día. La primera charla es gratis y sin compromiso.</p>
+    <div class="channels">
+      <div class="chan"><small>Correo</small><span class="val" id="c-mail">miguelalvarezalba@gmail.com</span><button type="button" data-copy="c-mail">Copiar</button></div>
+      <div class="chan"><small>WhatsApp</small><span class="val" id="c-tel">699 93 22 07</span><button type="button" data-copy="c-tel">Copiar</button></div>
+      <a class="chan" href="https://www.linkedin.com/in/miguel-%C3%A1lvarez-alba-215919306" target="_blank" rel="noopener"><small>LinkedIn</small><span>Miguel Álvarez Alba →</span></a>
+      <a class="chan" href="https://github.com/MiguelAlvarezAlba" target="_blank" rel="noopener"><small>GitHub</small><span>MiguelAlvarezAlba →</span></a>
+    </div>
+  </div>
+</section>
+
+<div class="mobile-cta" aria-label="Contacto rápido">
+  <a class="btn" href="https://wa.me/34699932207" target="_blank" rel="noopener">WhatsApp</a>
+  <a class="btn primary" href="#contacto">Pedir presupuesto</a>
+</div>
+
+<footer>
+  <div class="wrap foot">Miguel Álvarez · Webs, apps e informática en Boadilla del Monte<nav aria-label="Legal"><a href="aviso-legal.html">Aviso legal</a><a href="privacidad.html">Privacidad</a></nav></div>
+</footer>
+
+<script>
+(function () {
+  var sin = document.getElementById('btn-sin');
+  var con = document.getElementById('btn-con');
+  var states = {
+    sin: {
+      web: ['No disponible', 'missing'],
+      res: ['Solo por teléfono', 'missing'],
+      serv: ['Hay que preguntar', 'missing'],
+      note: 'Muchos negocios de la zona tienen reseñas excelentes y ningún sitio donde enviar a quien les busca.'
+    },
+    con: {
+      web: ['tunegocio.es', 'fixed'],
+      res: ['Online, a cualquier hora', 'fixed'],
+      serv: ['Con precios y fotos', 'fixed'],
+      note: 'Quien te encuentra en el mapa ve tus servicios, reserva y llega sin tener que llamar.'
+    }
+  };
+  function set(key) {
+    var s = states[key];
+    [['f-web', s.web], ['f-res', s.res], ['f-serv', s.serv]].forEach(function (p) {
+      var el = document.getElementById(p[0]);
+      el.textContent = p[1][0];
+      el.className = p[1][1];
+    });
+    document.getElementById('f-note').textContent = s.note;
+    sin.setAttribute('aria-pressed', key === 'sin');
+    con.setAttribute('aria-pressed', key === 'con');
+  }
+  sin.addEventListener('click', function () { set('sin'); });
+  con.addEventListener('click', function () { set('con'); });
+
+  document.querySelectorAll('[data-copy]').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var el = document.getElementById(b.getAttribute('data-copy'));
+      var text = el.textContent;
+      function selectIt() {
+        var r = document.createRange(); r.selectNodeContents(el);
+        var sel = window.getSelection(); sel.removeAllRanges(); sel.addRange(r);
+      }
+      try {
+        navigator.clipboard.writeText(text).then(function () {
+          b.textContent = 'Copiado';
+          setTimeout(function () { b.textContent = 'Copiar'; }, 1500);
+        }, selectIt);
+      } catch (e) { selectIt(); }
+    });
+  });
+
+  // Menú en móvil
+  var menuBtn = document.getElementById('menu-btn');
+  var nav = document.getElementById('site-nav');
+  menuBtn.addEventListener('click', function () {
+    var open = nav.classList.toggle('open');
+    menuBtn.setAttribute('aria-expanded', open);
+  });
+  nav.querySelectorAll('a').forEach(function (a) {
+    a.addEventListener('click', function () { nav.classList.remove('open'); menuBtn.setAttribute('aria-expanded', 'false'); });
+  });
+})();
+</script>
+
+</body>
+</html>
